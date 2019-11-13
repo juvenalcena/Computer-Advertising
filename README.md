@@ -33,3 +33,5 @@ those computers works
 The first page is the home page wich will advertise computer
 The socond page is an index wich the content is some shop like amazon
 provide prices.
+
+<a href="https://juvenalcena.github.io/Computer-Advertising/">Link</a>
