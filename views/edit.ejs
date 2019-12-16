@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="adminstyle.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Dashboard</title>
+    <title>User Panel</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
 			<div class="menubar">
 				
 				<ul class="menu">
-					<li class="selected"><a href="/">Home</a></li>	
+					<li class="selected"><a href="/index">Home</a></li>	
 					<!-- <li><a href="films.html"></a></li> -->
 					<li><a href="#">About</a></li>
 					<li><a href="/rating">Maintenance</a></li>
@@ -38,33 +38,26 @@
 			</div>
 
 		</div>
-
-        <div class="container" style="background: rgb(223, 149, 53);">
+        <div class="">
             
             <div class="col-lg-12">
-                <div class="col-lg-12 login-title">
+                <div class="col-lg-12 login-title" style="background-color: rgb(11, 31, 31);">
                     <% include ./partials/messages %>
-                    
-                    <form action="/delete" method="POST" class="col-lg-2">
-                        <a href="/users/logout" class="btn btn"
-                            style="float: left;"><i class="fas fa-sign-out-alt"></i> Log Out</a>
-                        <a href="/setting" class="btn btn" style="float: left;margin-top: 133px;
-                        margin-left: -114px;"> Setting </a>
-                        <input type="text" class="form-control" name="id" value="<%= user._id %>" hidden>
-                        <button type="submit" class="btn btn" style="float: left;
-                        margin-top: 45px;
-                        margin-left: -111px;"> Delete Account </button>
-                        
+                    <form action="/edit" method="post" style="margin: 7% 24%">
+                        <div class=" user">
+                            <h4 style="text-align: left;">Current Name: <%= user.name%></h4>
+                            <h4 style="text-align: left;">Current Email: <%= user.email%></h4> 
+                            <input style="text-align: left;margin-left: -90px;" type="text" name="name" id="name" required placeholder="Edit Your Name">
+                            <input style="text-align: left;" type="text" name="email" id="email" required placeholder="Edit Your Email">
+                            <input type="text" name="id" id="id" value="<%= user._id %>" required hidden>
+                        </div>
+                            <button type="submit" class="btn btn-lg"> Save </button>
+                            <a href="/user" class="btn btn-lg"> Back to user account </a>
+                            <a href="/setting" class="btn btn-lg"> Setting </a>
                     </form>
-                    <div class=" user" style="padding: 0% 14%">
-                        <h1>Hello <span class="first"><%= user.name%></span> Welcome
-                                to Your panel.</h1>
-                    </div>
-                    
-                    
                 </div>
             </div>
-        </div>    
+        </div>  
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>

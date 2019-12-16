@@ -35,4 +35,3 @@ The socond page is an index wich the content is some shop like amazon
 provide prices.
 
 <a href="https://juvenalcena.github.io/Computer-Advertising/">Link</a>
-https://juvenalcena-computer-advertising.glitch.me/
